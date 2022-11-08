@@ -75,16 +75,26 @@
             <configuration>
               <transformers>
                 <transformer />
+                <transformer />
+                <transformer />
+                <transformer />
               </transformers>
               <filters>
                 <filter>
                   <artifact>*:*</artifact>
                   <excludes>
-                    <exclude>META-INF/*</exclude>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
                   </excludes>
                 </filter>
               </filters>
+              <artifactSet />
               <relocations>
+                <relocation>
+                  <pattern>com.xtrimutil.app</pattern>
+                  <shadedPattern>shadedxtrim.com.xtrimutil.app</shadedPattern>
+                </relocation>
                 <relocation>
                   <pattern>org.apache.commons.lang3</pattern>
                   <shadedPattern>shadedxtrim.org.apache.commons.lang3</shadedPattern>

@@ -21,13 +21,12 @@
   </properties>
 
   <dependencies>
-    <!-- jar path: .m2/repository/com/xtrimutil/app/xtrim-util-app/1.0-SNAPSHOT/xtrim-util-app-1.0-SNAPSHOT.jar -->
     <dependency>
       <groupId>com.xtrimutil.app</groupId>
       <artifactId>xtrim-util-app</artifactId>
       <version>1.0-SNAPSHOT</version>
-      <!-- <scope>system</scope>
-      <systemPath>${project.basedir}/extra_jars/xtrim-util-app-1.0-SNAPSHOT.jar</systemPath> -->
+      <scope>system</scope>
+      <systemPath>${project.basedir}/extra_jars/xtrim-util-app-1.0-SNAPSHOT.jar</systemPath>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -149,10 +148,6 @@
               </filters>
               <artifactSet/>
               <relocations>
-                <relocation>
-                  <pattern>com.xtrimutil.app</pattern>
-                  <shadedPattern>shadedxtrim.com.xtrimutil.app</shadedPattern>
-                </relocation>
                 <relocation>
                   <pattern>org.apache.commons.lang3</pattern>
                   <shadedPattern>shadedxtrim.org.apache.commons.lang3</shadedPattern>
